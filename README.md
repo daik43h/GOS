@@ -1,2 +1,0 @@
-# GOS
-new progect
