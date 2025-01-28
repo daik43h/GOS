@@ -1,0 +1,87 @@
+.p{
+    background-color: #4e4e4e;
+  }
+  
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    .background {
+      background-color: #fff; /* Белый задний фон */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .registration-form {
+      background: linear-gradient(to bottom right, rgba(0, 128, 0, 0.5), rgba(255, 255, 255, 0.5)); /* Зеленый-белый градиент */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 255, 21, 0.2); /* Тень по всем сторонам */
+      width: 300px;
+      text-align: center;
+    }
+    
+    .registration-form h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+    
+    .registration-form label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #000;
+    }
+    
+    .registration-form input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .registration-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #33a769;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login{
+        width: 10px;
+        height: 10px;
+        margin-left: 50px;
+        text-align: right;
+    }
+   
+    .registration-form button:hover {
+      background-color: #4e4e4e;
+    }
+    
+    .oauth-buttons {
+      margin-top: 20px;
+    }
+    
+    .yandex-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #a7bdad;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .g-signin2{
+        justify-content: center;
+    }
+    .yandex-button:hover {
+      background-color: #e6b800;
+    }
