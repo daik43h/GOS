@@ -1,79 +1,194 @@
-.p{
-    background-color: #4e4e4e;
+/* Обнуляем отступы и поля для всех элементов и их псевдоэлементов,
+   устанавливаем box-sizing: border-box для всех элементов */
+   *,*:before,*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
   
-  body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
+  /* Устанавливаем фон для body */
+  body {
+    background-color: #164b1f;
+  }
+  
+  /* Создаем контейнер с фиксированными размерами и центрируем его по вертикали и горизонтали */
+  .background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+  }
+  
+  /* Определяем свойства для фигур внутри контейнера .background */
+  .background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+   /* Применяем градиентный фон к первой фигуре и позиционируем ее */
+   .shape:first-child {
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+    animation: animate 4s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
     }
-    
-    .background {
-      background-color: #fff; /* Белый задний фон */
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  
+    100% {
+      transform: rotate(360deg);
     }
-    
-    .registration-form {
-      background: linear-gradient(to bottom right, rgba(0, 128, 0, 0.5), rgba(255, 255, 255, 0.5)); /* Зеленый-белый градиент */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень по всем сторонам */
-      width: 300px;
-      text-align: center;
+  }
+  
+  /* Применяем градиентный фон ко второй фигуре и позиционируем ее */
+  .shape:last-child {
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+    animation: animate 4s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
     }
-    
-    .registration-form h2 {
-      margin-bottom: 20px;
-      color: #000;
+  
+    100% {
+      transform: rotate(360deg);
     }
-    
-    .registration-form label {
-      display: block;
-      margin: 10px 0 5px;
-      color: #000;
-    }
-    
-    .registration-form input {
-      width: calc(100% - 20px);
-      padding: 10px;
-      margin-bottom: 20px;
-      border: none;
-      border-radius: 5px;
-    }
-    
-    .registration-form button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #33a769;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .registration-form button:hover {
-      background-color: #4e4e4e;
-    }
-    
-    .oauth-buttons {
-      margin-top: 20px;
-    }
-    
-    .yandex-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #a7bdad;
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-    }
-    
-    .yandex-button:hover {
-      background-color: #e6b800;
-    }
+  }
+  
+  /* Оформляем форму, устанавливаем фон с прозрачностью и эффектом размытия, центрируем ее */
+  form {
+    height: 580px;
+    width: 400px;
+
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+  }
+  
+  /* Применяем шрифт Poppins ко всем элементам внутри формы,
+     устанавливаем цвет текста и убираем обводку */
+  form * {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    margin-top: -30px;
+  }
+  
+  /* Оформляем заголовок формы */
+  form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+  }
+  
+  /* Оформляем метки, делая их блочными элементами с верхним отступом */
+  label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Оформляем поля ввода, делая их блочными,
+     с фиксированной высотой и шириной 100%,
+     фоном с прозрачностью, закругленными углами */
+  input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  /* Устанавливаем цвет текста для плейсхолдеров в полях ввода */
+  ::placeholder {
+    color: #000000;
+  }
+  
+  /* Оформляем кнопки, добавляя верхний отступ,
+     делая их шириной 100%, с белым фоном,
+     темно-синим текстом, внутренними отступами */
+  button {
+    margin-top: 30px;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.341);
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Добавляем контейнер для социальных иконок,
+     делая его блочным и применяя flexbox для выравнивания */
+  .social {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; /* Центрируем кнопки */
+    gap: 10px; /* Разделяем кнопки */
+  }
+  
+  /* Оформляем ссылки для социальных кнопок,
+     убираем подчеркивание, добавляем фон, закругленные углы,
+     внутренние отступы и выравнивание */
+  .social a {
+    text-decoration: none; /* Убираем подчеркивание */
+    background-color: rgba(255,255,255,0.27); /* Прозрачный фон */
+    color: #ffffff; /* Цвет текста */
+    border-radius: 3px; /* Закругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    display: flex; /* Flexbox для выравнивания иконок и текста */
+    align-items: center; /* Центрирование по вертикали */
+    transition: background-color 0.3s; /* Плавный переход фона при наведении */
+  }
+  
+  /* Изменяем фон при наведении */
+  .social a:hover {
+    background-color: rgba(255,255,255,0.47); /* Изменение фона при наведении */
+  }
+  
+  /* Стили для кнопки Google */
+  .social .go {
+    background-color:  rgba(255,255,255,0.07); /* Красный фон для кнопки Google */
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Стили для кнопки Yandex */
+  .social .ya {
+    background-color: rgba(255,255,255,0.07); /* Желтый фон для кнопки Yandex */
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Отступ справа от иконки */
+  .social i {
+    margin-right: 15px;
+  }
+  

@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Форма регистрации</title>
-  <link rel="stylesheet" href="registr.css">
-  <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="/registr/registr.css">
+    <title>Glassmorphism login Form Tutorial in html css</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="p">
-<div class="background">
-  <div class="registration-form">
-    <h2>Регистрация</h2>
-    <form>
-      <input type="text" id="username" name="username" required placeholder="Введите телефон">
-      <input type="text" id="username" name="username" required placeholder="Введите имя пользователя">
-      <input type="email" id="email" name="email" required placeholder="Введите адрес эл. почты">
-      <input type="password" id="password" name="password" required placeholder="Введите пароль">
-
-      <button type="submit">Регистрация</button>
-    </form>
-
-    <div class="oauth-buttons">
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.by%2F&ec=GAlAmgQ&hl=ru&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S2014022880%3A1738054359330085&ddm=1"><img src="https://static.tildacdn.com/tild3864-3633-4430-a130-396562633966/pngwing.png" alt="google" width="40px" height="40px"></a>    
-      <a href="https://passport.yandex.by/auth/add?retpath=https%3A%2F%2Fpassport.yandex.by%2Fprofile%2Femails%2F&noreturn=1" ><img src="https://vlest.ru/assets/img/icons/yandex-logo.png" alt="yandex" width="50px" height="50px"></a> 
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
-  </div>
-</div>
+    <form>
+        <h3>Регистрация</h3>
+
+        <label for="username">Имя пользователя</label>
+        <input type="text" placeholder="Придумайте имя" id="mail">
+
+        <label for="email">Почта или телефон пользователя</label>
+        <input type="email" placeholder="Электронная почта или телефон" id="username">
+
+        <label for="password">Пароль</label>
+        <input type="password" placeholder="Пароль" id="password">
+
+        <label for="password">Повтор пароля</label>
+        <input type="password" autocomplete="new-password"  placeholder="Повторите пароль" id="password">
+                         <!-- autocomplete="new-password" эта команда убтрает автозаполнение -->
+
+        <button>Готово</button>
+        <div class="social">
+          <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.by%2F&ec=GAlAmgQ&hl=ru&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S2014022880%3A1738054359330085&ddm=1" class="go">
+              Google
+          </a>
+          <a href="https://passport.yandex.by/auth/add?retpath=https%3A%2F%2Fpassport.yandex.by%2Fprofile%2Femails%2F&noreturn=1" class="ya">
+             Yandex
+            
+          </a>
+        </div>
+    </form>
 </body>
 </html>
