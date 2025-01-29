@@ -19,7 +19,7 @@ a {
     width: 100%;
     height: 10vh;
     border: 0px solid red;
-    background: linear-gradient(to right,rgb(200, 87, 87), rgb(200, 87, 87));
+    background: rgb(0, 168, 118);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,6 +36,7 @@ a {
     align-items: right;
     justify-content: right;
     border: 0px solid black;
+    
 }
 
 .navigation_item {
@@ -51,18 +52,37 @@ a {
 #search_input {
     width: 100%;
 }
+#services_btn{
+    width: 100%;
+    height: 60%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, rgba(53, 212, 164), rgba(95, 212, 177, 0.5));
+}
+
+#support_btn{
+    width: 100%;
+    height: 60%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, rgba(53, 212, 164), rgba(95, 212, 177, 0.5));
+}
 
 #login_btn {
     width: 100%;
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to right, rgb(115, 221, 172), rgb(59, 223, 130));
+    background: linear-gradient(to bottom right, rgba(53, 212, 164), rgba(95, 212, 177, 0.5));
+}
+#log_font{
+    color: rgb(0, 0 ,0);
 }
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background-color: rgb(95, 212, 177);
    
 }
 
@@ -134,7 +154,7 @@ a {
     width: 20vw;
     height: 25vh;
     border: 0px solid rgb(71, 234, 38);
-    background: linear-gradient(to right, rgb(22, 202, 79), rgb(32, 160, 207));
+    background:  rgb(0, 168, 118);
     margin: 0 1vw;
     border-radius: 10px;
 }
@@ -144,27 +164,18 @@ a {
     width: 42vw;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8fafe;
-    background: linear-gradient(to right,  rgb(34, 130, 44),rgb(34, 130, 44));
-}
-
-
-
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 70px 60px;
     background-color: #2a98f3;
-    background: linear-gradient(to right,rgb(200, 87, 87), rgb(200, 87, 87));
+    background:rgb(0, 168, 118);
     color: #0974f7;
     font-size: 14px;
     border: 1px solid rgb(66, 66, 66);
     width: 100%;
+    height: 10vh;
 }
 
 .footer .links {
@@ -195,8 +206,20 @@ body {
     display: flex;
      justify-content: center; 
      align-items: center;
-      background-color: rgb(121, 179, 246); 
+      background-color: rgb(0, 168, 118); 
       border-radius: 50%; 
+      text-decoration: none; 
+      color: inherit;
+}
+
+.github{
+    width: 40px;
+    height: 40px;
+    display: flex;
+     justify-content: center; 
+     align-items: center;
+      background-color: rgb (36, 110, 48); 
+      border-radius: 0%; 
       text-decoration: none; 
       color: inherit;
 }
@@ -207,7 +230,7 @@ body {
     position: relative;
     
 }
-
+  
 .slider-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -261,7 +284,7 @@ body {
 }
 
 .slider-button:hover {
-    background: rgb(1, 120, 255);
+   background: rgb(95, 212, 177);
 }
 
 
@@ -288,7 +311,7 @@ body {
     justify-content: center; /* Центруем слайды */
     align-items: center;
     width: 100%;
-    background: radial-gradient(circle, rgb(34, 130, 44), rgb(134, 195, 145), rgb(34, 130, 44));
+    background: rgb(0, 168, 118);
     padding: 20px 0;
 }
 
@@ -313,7 +336,7 @@ body {
 }
 
 .slider-button {
-    background: white;
+    background: rgb(255, 255, 255);
     border: none;
     width: 40px;
     height: 40px;
@@ -335,14 +358,6 @@ body {
     right: 20px;
 }
 
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
   .categories_list {
     display: flex;
     flex-wrap: wrap;
@@ -388,8 +403,9 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    max-width: 400px;
-    width: 90%;
+    max-width: 100vw;
+    height: 80vh;
+    width: 90vw;
   }
   
   .modal .close {
@@ -409,10 +425,4 @@ body {
 
 
 
-
-
-
-
-
-
-
+  

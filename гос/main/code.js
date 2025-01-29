@@ -115,3 +115,17 @@ modals.forEach(modal => {
 });
 
 
+function showModal(icon) {
+  // Делаем иконку белой
+  icon.classList.toggle('active');
+
+  // Показать или скрыть модальное окно
+  var modal = document.getElementById('modal');
+  if (modal.style.display === 'flex') {
+      modal.style.display = 'none';
+  } else {
+      modal.style.display = 'flex';
+  }
+}
+
+

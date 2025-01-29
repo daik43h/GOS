@@ -10,38 +10,17 @@
 </head>
 <body>
 
-<div class="background">
-  <div class="registration-form">
-    <h2>Регистрация</h2>
-    <form>
-      <input type="text" id="username" name="username" required placeholder="Введите телефон или адрес эл. почты">
-      <input type="text" id="username" name="username" required placeholder="Введите имя пользователя">
-      <input type="email" id="email" name="email" required placeholder="Введите пароль">
-
-      <label for="password">Пароль:</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit">Регистрация</button>
-    </form>
-
-    <div class="oauth-buttons">
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      <a href="https://oauth.yandex.ru/authorize?response_type=token&client_id=YOUR_YANDEX_CLIENT_ID" class="yandex-button">
-        <img src="path/to/yandex-icon.png" alt="Яндекс" class="round-icon"> Войти через Яндекс
-      </a>
+    <div class="loader">
+      <span></span>
     </div>
-  </div>
-</div>
 
-<script>
-  function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
-  }
-</script>
+
+
+
+
+
+
+
 
 </body>
 </html>
