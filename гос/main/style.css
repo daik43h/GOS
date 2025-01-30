@@ -148,6 +148,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: #ff0101;
 }
 
 .info_block {
@@ -157,6 +158,7 @@ a {
     background:  rgb(0, 168, 118);
     margin: 0 1vw;
     border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(53, 53, 53, 0.5)
 }
 
 .extra_info_block {
