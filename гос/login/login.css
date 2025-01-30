@@ -8,7 +8,7 @@
   
   /* Устанавливаем фон для body */
   body {
-    background-color: #164b1f;
+    background-color:#FFDAB9;
   }
   
   /* Создаем контейнер с фиксированными размерами и центрируем его по вертикали и горизонтали */
@@ -32,8 +32,8 @@
   /* Применяем градиентный фон к первой фигуре и позиционируем ее */
   .shape:first-child {
     background: linear-gradient(
-        #1845ad,
-        #23a2f6
+      #e5929a,
+      #fed6da
     );
     left: -80px;
     top: -80px;
@@ -53,8 +53,8 @@
   .shape:last-child {
     background: linear-gradient(
         to right,
-        #ff512f,
-        #f09819
+        #ffd1dc,
+        #f38e9f
     );
     right: -30px;
     bottom: -80px;
@@ -120,7 +120,7 @@
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255,255,255,0.07);
+    background-color: #fadfad;
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -139,7 +139,7 @@
   button {
     margin-top: 30px;
     width: 100%;
-    background-color:rgba(255, 255, 255, 0.341);
+    background-color:#fadfad;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -150,7 +150,7 @@
   .button_registr {
     margin-top: 15px;
     width: 100%;
-    background-color:  rgba(255, 255, 255, 0.341);
+    background-color:  #fadfad;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -188,18 +188,18 @@
   
   /* Изменяем фон при наведении */
   .social a:hover {
-    background-color: rgba(255,255,255,0.47); /* Изменение фона при наведении */
+    background-color: #faecd3c7; /* Изменение фона при наведении */
   }
   
   /* Стили для кнопки Google */
   .social .go {
-    background-color:  rgba(255,255,255,0.07); /* Красный фон для кнопки Google */
+    background-color:  #fadfad00; /* Красный фон для кнопки Google */
     color: rgb(0, 0, 0);
   }
   
   /* Стили для кнопки Yandex */
   .social .ya {
-    background-color: rgba(255,255,255,0.07); /* Желтый фон для кнопки Yandex */
+    background-color: #fadfad00; /* Желтый фон для кнопки Yandex */
     color: rgb(0, 0, 0);
   }
   

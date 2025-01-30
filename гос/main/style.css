@@ -19,7 +19,7 @@ a {
     width: 100%;
     height: 10vh;
     border: 0px solid red;
-    background: rgb(0, 168, 118);
+    background: #EBD09F;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +57,7 @@ a {
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, rgba(53, 212, 164), rgba(95, 212, 177, 0.5));
+    background: linear-gradient(to bottom right, #ffe5b4, #ffe5b4);
 }
 
 #support_btn{
@@ -65,7 +65,7 @@ a {
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, rgba(53, 212, 164), rgba(95, 212, 177, 0.5));
+    background: linear-gradient(to bottom right, #ffe5b4, #ffe5b4);
 }
 
 #login_btn {
@@ -73,7 +73,7 @@ a {
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, rgba(53, 212, 164), rgba(95, 212, 177, 0.5));
+    background: linear-gradient(to bottom right, #ffe5b4, #ffe5b4);
 }
 #log_font{
     color: rgb(0, 0 ,0);
@@ -82,7 +82,7 @@ a {
 .main {
     width: 100%;
     height: 100%;
-    background-color: rgb(95, 212, 177);
+    background-color: #ffe7c4;
    
 }
 
@@ -154,8 +154,8 @@ a {
 .info_block {
     width: 20vw;
     height: 25vh;
-    border: 0px solid rgb(71, 234, 38);
-    background:  rgb(0, 168, 118);
+    border: 0px solid #EBD09F;
+    background:  #EBD09F;
     margin: 0 1vw;
     border-radius: 10px;
     box-shadow: 10px 10px 5px rgba(53, 53, 53, 0.5)
@@ -171,9 +171,9 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 70px 60px;
-    background-color: #2a98f3;
-    background:rgb(0, 168, 118);
-    color: #0974f7;
+    background-color: #EBD09F;
+    background:  #EBD09F;
+    color: #EBD09F;
     font-size: 14px;
     border: 1px solid rgb(66, 66, 66);
     width: 100%;
@@ -208,7 +208,7 @@ a {
     display: flex;
      justify-content: center; 
      align-items: center;
-      background-color: rgb(0, 168, 118); 
+      background-color: #EBD09F; 
       border-radius: 50%; 
       text-decoration: none; 
       color: inherit;
@@ -286,7 +286,7 @@ a {
 }
 
 .slider-button:hover {
-   background: rgb(95, 212, 177);
+   background: #ffe5b4;
 }
 
 
@@ -313,7 +313,7 @@ a {
     justify-content: center; /* Центруем слайды */
     align-items: center;
     width: 100%;
-    background: rgb(0, 168, 118);
+    background: #EBD09F;
     padding: 20px 0;
 }
 
