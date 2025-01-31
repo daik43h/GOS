@@ -6,10 +6,12 @@
     <title>РБ Услуги</title>
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<body>
+<body class="zxc">
     <div class="header">
-        <img src="../images/logg.png" alt="logo" id="logo">
+        <img src="../images/bosel.png" alt="logo" id="logo">
         <ul id="navigation">
             <li class="navigation_item"><button id="services_btn"><a href="#Services">Услуги</a></li>
             <li class="navigation_item"><button id="support_btn"><a href="../support/support.html">Поддержка</a></li>
@@ -21,19 +23,19 @@
         <div class="categories">
             <ul class="categories_list">
                 <li class="categories_item ">
-                  <img src="../images/defense.png" alt="test" class="category_img icon" data-modal="modal1">
+                  <img src="../images/shield.png" alt="test" class="category_img icon" data-modal="modal1">
                 </li>
                 <li class="categories_item">
-                  <img src="../images/health.png" alt="test" class="category_img icon" data-modal="modal2">
+                  <img src="../images/wifi.png" alt="test" class="category_img icon" data-modal="modal2">
                 </li>
                 <li class="categories_item">
-                  <img src="../images/defense.png" alt="test" class="category_img icon" data-modal="modal3">
+                  <img src="../images/heart2.png" alt="test" class="category_img icon" data-modal="modal3">
                 </li>
                 <li class="categories_item">
-                    <img src="../images/internet_servise.png" alt="test" class="category_img icon" data-modal="modal4">
+                    <img src="../images/internet2.png" alt="test" class="category_img icon" data-modal="modal4">
                   </li>
                   <li class="categories_item">
-                    <img src="../images/Houses.png" alt="test" class="category_img icon" data-modal="modal5">
+                    <img src="../images/house.png" alt="test" class="category_img icon" data-modal="modal5">
                   </li>
                   <li class="categories_item">
                     <img src="../images/car.png" alt="test" class="category_img icon" data-modal="modal6">
@@ -48,7 +50,7 @@
                     <img src="../images/supporting.png" alt="test" class="category_img icon" data-modal="modal9">
                   </li>
                   <li class="categories_item">
-                    <img src="../images/shopping.png" alt="test" class="category_img icon" data-modal="modal10">
+                    <img src="../images/shop.png" alt="test" class="category_img icon" data-modal="modal10">
                   </li>
                   <li class="categories_item">
                     <img src="../images/zacony.png" alt="test" class="category_img icon" data-modal="modal11">
@@ -129,37 +131,37 @@
                 </div>
               </div>     
         </div>
-        <div class="slider-container">
-            <div class="slider-track">
-                <div class="slide scale ">
-                    <a href="">
-                        <img src="https://i.pinimg.com/474x/5f/2c/60/5f2c603ba32f78230780a37e6d989126.jpg?nii=t" alt="Icon 1">
-                        <p>Госуслуги для новых регионов</p>
-                    </a>
-                </div>
-                <div class="slide scale ">
-                    <a href="">
-                        <img src="https://elcontacto.ru/files/journal/original/1686160997_d1a1486831c6db7ac52960b0fda713cd.jpg" alt="Icon 2">
-                        <p>Военная служба по контракту</p>
-                    </a>
-                </div>
-                <div class="slide scale ">
-                    <a href="">
-                        <img src="https://sh11-achinsk-r04.gosweb.gosuslugi.ru/netcat_files/userfiles/VR/2023-12-12_19-02-12.png" alt="Icon 3">
-                        <p>Станьте волонтёром в других регионах</p>
-                    </a>
-                </div>
-                <div class="slide scale ">
-                    <a href="">
-                        <img src="https://ir.ozone.ru/s3/multimedia-u/6626318358.jpg" alt="Icon 5">
-                        <p>Копите с участием и гарантией государства</p>
-                    </a>
-                </div>
-            </div>
-            <div class="slider-buttons">
-                <div class="slider-button prev">&#8249;</div>
-                <div class="slider-button next">&#8250;</div>
-            </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="https://i.pinimg.com/474x/5f/2c/60/5f2c603ba32f78230780a37e6d989126.jpg?nii=t" alt="">
+                      <p>Слайд 1</p>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="https://elcontacto.ru/files/journal/original/1686160997_d1a1486831c6db7ac52960b0fda713cd.jpg" alt="">
+                      <p>Слайд 2</p>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="https://sh11-achinsk-r04.gosweb.gosuslugi.ru/netcat_files/userfiles/VR/2023-12-12_19-02-12.png" alt="">
+                      <p>Слайд 3</p>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="https://ir.ozone.ru/s3/multimedia-u/6626318358.jpg" alt="">
+                      <p>Слайд 4</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Элементы управления -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
         
         <div class="info">

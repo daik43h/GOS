@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +22,7 @@ a {
     width: 100%;
     height: 10vh;
     border: 0px solid red;
-    background: #EBD09F;
+    background: #00A876;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,14 +53,16 @@ a {
 }
 
 #search_input {
+    height: 30%;
     width: 100%;
+    
 }
 #services_btn{
     width: 100%;
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, #ffe5b4, #ffe5b4);
+    background: linear-gradient(to bottom right, #35D4A4, #35D4A4);
 }
 
 #support_btn{
@@ -65,7 +70,7 @@ a {
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, #ffe5b4, #ffe5b4);
+    background: linear-gradient(to bottom right, #35D4A4, #35D4A4);
 }
 
 #login_btn {
@@ -73,7 +78,7 @@ a {
     height: 60%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, #ffe5b4, #ffe5b4);
+    background: linear-gradient(to bottom right, #35D4A4, #35D4A4);
 }
 #log_font{
     color: rgb(0, 0 ,0);
@@ -82,7 +87,7 @@ a {
 .main {
     width: 100%;
     height: 100%;
-    background-color: #ffe7c4;
+    background-color: #ffffff;
    
 }
 
@@ -154,8 +159,8 @@ a {
 .info_block {
     width: 20vw;
     height: 25vh;
-    border: 0px solid #EBD09F;
-    background:  #EBD09F;
+    border: 0px solid #00A876;
+    background:  #00A876;
     margin: 0 1vw;
     border-radius: 10px;
     box-shadow: 10px 10px 5px rgba(53, 53, 53, 0.5)
@@ -171,9 +176,9 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 70px 60px;
-    background-color: #EBD09F;
-    background:  #EBD09F;
-    color: #EBD09F;
+    background-color: #00A876;
+    background:  #00A876;
+    color: #00A876;
     font-size: 14px;
     border: 1px solid rgb(66, 66, 66);
     width: 100%;
@@ -199,7 +204,7 @@ a {
     gap: 20px;
 }
 .social:hover .img{
-    transform: scale(1.1); /* Увеличение картинки при наведении */
+transform: scale(1.1); /* Увеличение картинки при наведении */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .footer .social a {
@@ -208,7 +213,6 @@ a {
     display: flex;
      justify-content: center; 
      align-items: center;
-      background-color: #EBD09F; 
       border-radius: 50%; 
       text-decoration: none; 
       color: inherit;
@@ -218,87 +222,52 @@ a {
     width: 40px;
     height: 40px;
     display: flex;
-     justify-content: center; 
-     align-items: center;
-      background-color: rgb (36, 110, 48); 
-      border-radius: 0%; 
-      text-decoration: none; 
-      color: inherit;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 0%; 
+    text-decoration: none; 
+    color: inherit;
 }
-.slider-container {
-    max-width: 159vh;
-    margin: 20px auto;
-    overflow: hidden;
+
+/* Стили для слайдов */
+.swiper-container .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Фиксированная высота слайда */
     position: relative;
-    
-}
-  
-.slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 200px;
-    margin: 10px;
-    padding: 20px;
-    margin-right: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background: linear-gradient(to bottom, #6e6c6c, #ffffff);
-}
-
-.slide img {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 15px;
-}
-
-.slide p {
-    margin: 0;
-    font-size: 14px;
-    color: #6c7c8c;
-}
-
-.slider-buttons {
-    position: absolute ;
-    top: 50%;
-    transform: translateY(-50%);
+    overflow: hidden; /* Скрытие части изображения, если оно выходит за пределы */
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
 }
 
-.slider-button {
-    background: rgb(1, 120, 255);
-    border: px solid #ddd;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+/* Стили для содержимого слайда */
+.swiper-container .swiper-slide .slide-content {
+    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: all;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.slider-button:hover {
-   background: #ffe5b4;
-}
-
-
-.centered-container {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    background-color: #f8fafe;
-    margin: 0; 
+    height: 100%; /* Содержимое занимает всю высоту слайда */
+    width: 100%;
 }
 
+/* Стили для изображений */
+.swiper-container .swiper-slide .slide-content img {
+    width: 100%; /* Ограничиваем ширину изображения до 100% от родительского элемента */
+    height: 90%; /* Ограничиваем высоту изображения до 100% от родительского элемента */
+    object-fit:contain; /* Обрезка изображения, чтобы оно заполнило заданные размеры без искажения */
+    object-position: center center; /* Устанавливаем центрирование изображения */
+}
+
+/* Стили для текста */
+.swiper-container .swiper-slide .slide-content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.swiper-container .swiper-pagination {
+    display: none; /* Отключаем отображение точек */
+}
 
 .scale {
     transition: 0.5s; 
@@ -307,58 +276,6 @@ a {
     transform: scale(1.1); 
    }
 
-   .slider-container {
-    overflow: hidden; /* Скрываем лишнее */
-    display: flex;
-    justify-content: center; /* Центруем слайды */
-    align-items: center;
-    width: 100%;
-    background: #EBD09F;
-    padding: 20px 0;
-}
-
-.slider-track {
-    display: flex;
-    gap: 20px; /* Отступы между слайдами */
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-}
-
-.slide {
-    flex-shrink: 0;
-    width: 20%; /* Устанавливаем ширину каждого слайда */
-    height: 200px; /* Высота слайдов */
-    background: white;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.slider-button {
-    background: rgb(255, 255, 255);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-}
-
-.slider-button.prev {
-    left: 20px;
-}
-
-.slider-button.next {
-    right: 20px;
-}
 
   .categories_list {
     display: flex;

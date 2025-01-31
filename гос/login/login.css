@@ -1,3 +1,4 @@
+
 /* Обнуляем отступы и поля для всех элементов и их псевдоэлементов,
    устанавливаем box-sizing: border-box для всех элементов */
    *,*:before,*:after {
@@ -8,7 +9,9 @@
   
   /* Устанавливаем фон для body */
   body {
-    background-color:#FFDAB9;
+    background-color:#ffffff;
+      overflow: hidden;
+
   }
   
   /* Создаем контейнер с фиксированными размерами и центрируем его по вертикали и горизонтали */
@@ -23,8 +26,8 @@
   
   /* Определяем свойства для фигур внутри контейнера .background */
   .background .shape {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 172px;
     position: absolute;
     border-radius: 50%;
   }
@@ -32,8 +35,8 @@
   /* Применяем градиентный фон к первой фигуре и позиционируем ее */
   .shape:first-child {
     background: linear-gradient(
-      #e5929a,
-      #fed6da
+      #38e672be,
+      #5de2abce
     );
     left: -80px;
     top: -80px;
@@ -53,8 +56,8 @@
   .shape:last-child {
     background: linear-gradient(
         to right,
-        #ffd1dc,
-        #f38e9f
+        #38e672be,
+      #5de2abce
     );
     right: -30px;
     bottom: -80px;
@@ -120,7 +123,7 @@
     display: block;
     height: 50px;
     width: 100%;
-    background-color: #fadfad;
+    background-color: #5de2bab0;
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -139,7 +142,7 @@
   button {
     margin-top: 30px;
     width: 100%;
-    background-color:#fadfad;
+    background-color:#5de2bab0;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -150,7 +153,7 @@
   .button_registr {
     margin-top: 15px;
     width: 100%;
-    background-color:  #fadfad;
+    background-color:  #5de2bab0;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -177,7 +180,7 @@
      внутренние отступы и выравнивание */
   .social a {
     text-decoration: none; /* Убираем подчеркивание */
-    background-color: rgba(255,255,255,0.27); /* Прозрачный фон */
+    background-color: #5de2bab0; /* Прозрачный фон */
     color: #ffffff; /* Цвет текста */
     border-radius: 3px; /* Закругленные углы */
     padding: 10px 20px; /* Внутренние отступы */
@@ -188,18 +191,18 @@
   
   /* Изменяем фон при наведении */
   .social a:hover {
-    background-color: #faecd3c7; /* Изменение фона при наведении */
+    background-color: #a6f5ddce; /* Изменение фона при наведении */
   }
   
   /* Стили для кнопки Google */
   .social .go {
-    background-color:  #fadfad00; /* Красный фон для кнопки Google */
+    background-color:  #a6f5ddce; /* Красный фон для кнопки Google */
     color: rgb(0, 0, 0);
   }
   
   /* Стили для кнопки Yandex */
   .social .ya {
-    background-color: #fadfad00; /* Желтый фон для кнопки Yandex */
+    background-color: #a6f5ddce; /* Желтый фон для кнопки Yandex */
     color: rgb(0, 0, 0);
   }
   
