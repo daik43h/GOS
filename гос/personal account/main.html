@@ -6,44 +6,61 @@
     <title>Личный кабинет</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div class="header">
+    <a href="/гос/main/index.html" class="header"><img src="../images/bosel.png" alt="logo" id="logo"></a>
+      <ul id="navigation">
+          <li class="navigation_item"><button id="services_btn"><a href="#Services">Услуги</a></li>
+          <li class="navigation_item"><button id="support_btn"><a href="../support/support.html">Поддержка</a></li>
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;">
+              <span class="label">Что вас интересует?</span>
+              <span class="focus-bg"></span>
+            </label>
+          <li class="navigation_item"><button id="login_btn"><a href="../login/login.html"><h1 id="log_font">Вход</h1></a></button></li>
+      </ul>
+  </div>
 <body class="">
-    <div class="header">
-        <div>Логотип</div>
-        <div>Меню</div>
-    </div>
     <div class="profile">
-        <h2>Имя пользователя</h2>
-       <p>Мои данные и контакты</p>
-        <p>Паспорт: 121212121212 | СНИЛС:1212121212121212  | ИНН:1212121212121212 </p>
+        <div class="profile-header">
+            <img src="/гос/images/logo_pers.png" alt="Пользователь" class="profile-img">
+            <div class="profile-info">
+                <h2>Имя пользователя</h2>
+                <p>Мои данные и контакты</p>
+            </div>
+        </div>
+        <p>Паспорт: 121212121212 | СНИЛС: 1212121212121212 | ИНН: 1212121212121212 </p>
         <div class="nav">
-            <a href="#">Обзор</a>
-            <a href="#">Уведомления</a>
-            <a href="#">Документы</a>
-            <a href="#">Карты оплаты</a>
-            <a href="#">Настройки</a>
+            <a href="#" class="nav-link" data-content="obzor">Обзор</a>
+            <a href="#" class="nav-link" data-content="notifications">Уведомления</a>
+            <a href="#" class="nav-link" data-content="documents">Документы</a>
+            <a href="#" class="nav-link" data-content="payment">Карты оплаты</a>
+            <a href="#" class="nav-link" data-content="settings">Настройки</a>
         </div>
     </div>
-   
-    <div class="content"></div>
+    <div class="content">
+       ьлфцвлфьцвфцьлвфцьлцьлфвьл
+    </div>
+    <div class="footer">
+        <div class="text">
+            <h3>Общие вопросы</h3>
+            <p>Что такое Госуслуги</p>
+            <p>Как найти нужную услугу</p>
+            <p>Все вопросы 17</p>
+        </div>
+        <div class="text">
+            <h3>Личный кабинет</h3>
+            <p>Зачем нужен личный кабинет</p>
+            <p>Как изменить номер телефона</p>
+            <p>Все вопросы 9</p>
+        </div>
+        <div class="text">
+            <h3>Вход и регистрация</h3>
+            <p>Как зарегистрироваться</p>
+            <p>Как подтвердить учётную запись</p>
+            <p>Все вопросы 32</p>
+        </div>
+    </div>
+
+    <script src="code.js"></script>
 </body>
-<div class="footer">
-    <div>
-        <h3>Общие вопросы</h3>
-        <p>Что такое Госуслуги</p>
-        <p>Как найти нужную услугу</p>
-        <p>Все вопросы 17</p>
-    </div>
-    <div>
-        <h3>Личный кабинет</h3>
-        <p>Зачем нужен личный кабинет</p>
-        <p>Как изменить номер телефона</p>
-        <p>Все вопросы 9</p>
-    </div>
-    <div>
-        <h3>Вход и регистрация</h3>
-        <p>Как зарегистрироваться</p>
-        <p>Как подтвердить учётную запись</p>
-        <p>Все вопросы 32</p>
-    </div>
-</div>
 </html>
