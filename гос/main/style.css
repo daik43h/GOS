@@ -277,9 +277,10 @@ a {
   object-position: center center;
 }
 
-.slide-content p {
-  font-size: 16px;
-  margin-top: 10px;
+.slide-content {
+  border: 1px solid black;
+  height: 10vh;
+  width: 20vw;
 }
 
 .swiper-button-next,
