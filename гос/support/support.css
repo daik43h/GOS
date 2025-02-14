@@ -141,6 +141,7 @@ body{
     flex-direction: column;
     row-gap: 3.28vw;
     margin-top: 6.77vw;
+    margin-bottom: 10%;
 }
 
 .cards__bottom-1{
@@ -155,7 +156,7 @@ body{
     height: 32vw;
     max-height: 30.5vw;
     box-shadow: 15px 15px 20px 7px #6e6e6e ;
-    background-color: #35D4A4;
+    background-color: #00A876;
     border-radius: 1.04vw;
 }
 
@@ -208,9 +209,9 @@ body{
     margin-left: 1vw;
 }
 .main2{
-    margin-top: 20vw;
+   
     width: 100%;
     height: 9.06vw;
-    background-color: #5FD4B1;
+    background-color: #00A876;
 }
 
