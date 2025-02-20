@@ -216,3 +216,22 @@ input:focus + .label + .focus-bg {
     transition: all 0.1s ease;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    #digital-services .service-item {
+        width: 100%;
+    }
+
+    #payment-methods .payment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #payment-methods .payment-option {
+        width: 80%;
+        margin: 5px 0;
+    }
+}
