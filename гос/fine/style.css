@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.summary {
+    margin-bottom: 20px;
+}
+
+.summary span {
+    font-weight: bold;
+}
+
+.filters, .search, .export-buttons {
+    margin-bottom: 20px;
+}
+
+.filters input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.export-buttons button {
+    padding: 5px 10px;
+}

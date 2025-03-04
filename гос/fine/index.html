@@ -1,213 +1,79 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оплата штрафов</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 80%;
-            max-width: 800px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .search-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .tab-buttons {
-            display: flex;
-            margin-bottom: 10px;
-        }
-        .tab-button {
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            color: #666;
-            cursor: pointer;
-            margin: 0 5px;
-        }
-        .tab-button.active {
-            background-color: #e0e0e0;
-        }
-        .search-input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 70%;
-            margin-bottom: 10px;
-        }
-        .search-button {
-            padding: 10px 15px;
-            background-color: #eee;
-            color: #333;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-         .notification-box {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .notification-text {
-            flex-grow: 1;
-        }
-
-        .notification-image {
-            width: 50px;
-            height: 50px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            margin-left: 15px;
-            position: relative;
-        }
-
-        .notification-image::before {
-            content: '1';
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 3px 6px;
-            font-size: 12px;
-        }
-        .popular-questions {
-            margin-top: 20px;
-        }
-        .question-item {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-            color: #333;
-            cursor: pointer;
-        }
-        .question-item:hover {
-            background-color: #f9f9f9;
-        }
-        .all-questions {
-            color: #007bff;
-            cursor: pointer;
-            margin-top: 10px;
-            display: block;
-        }
-        .answer {
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            margin-top: 5px;
-            display: none; /* Hidden by default */
-        }
-
-        .question-container {
-            margin-bottom: 10px;
-        }
-
-    </style>
+    <title>Штрафы</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Оплата штрафов</h1>
-        <div class="search-container">
-            <p>Искать по документу</p>
-            <div class="tab-buttons">
-                <button class="tab-button active">СТС</button>
-                <button class="tab-button">Водительские права</button>
-                <button class="tab-button">Постановление</button>
-                <button class="tab-button">Паспорт</button>
-            </div>
-            <input type="text" class="search-input" placeholder="Введите серию и номер">
-            <button class="search-button">Q</button>
-            <div><a href="#">Искать другие начисления</a></div>
+        <h1>Штрафы</h1>
+
+        <!-- Summary Section -->
+        <div class="summary">
+            <p>Просрочено — <span id="overdue">3</span></p>
+            <p>Всего штрафов — <span id="total-fines">3</span></p>
+            <p>750,00 ₽ — <a href="#" id="pay-all">Оплатить все</a></p>
         </div>
 
-         <div class="notification-box">
-            <div class="notification-text">
-                <p>Узнавайте о начислениях вовремя</p>
-                <p>Получайте уведомления о новых счетах, штрафах и задолженностях</p>
-                <a href="#">Регистрация</a>
-            </div>
-            <div class="notification-image">
-                <!-- You might want to add an actual image here -->
-            </div>
+        <!-- Filters Section -->
+        <div class="filters">
+            <label><input type="checkbox" id="filter-unpaid"> Неоплаченные</label>
+            <label><input type="checkbox" id="filter-in-process"> В обработке</label>
+            <label><input type="checkbox" id="filter-paid"> Оплаченные</label>
+            <label><input type="checkbox" id="filter-online"> Оплачено через OnlineГИБДД</label>
         </div>
 
-        <div class="popular-questions">
-            <h2>Популярные вопросы</h2>
-
-            <div class="question-container">
-                <div class="question-item" onclick="toggleAnswer('answer1')">&gt; Как оплатить штраф ГИБДД со скидкой</div>
-                <div class="answer" id="answer1">
-                    <p>Подробности об оплате штрафа ГИБДД со скидкой...</p>
-                    <!-- Здесь разместите подробную информацию о вопросе -->
-                </div>
-            </div>
-
-            <div class="question-container">
-                <div class="question-item" onclick="toggleAnswer('answer2')">&gt; Что делать, если приходят штрафы за проданную машину</div>
-                <div class="answer" id="answer2">
-                    <p>Подробности о штрафах за проданную машину...</p>
-                    <!-- Здесь разместите подробную информацию о вопросе -->
-                </div>
-            </div>
-
-            <div class="question-container">
-                <div class="question-item" onclick="toggleAnswer('answer3')">&gt; Как обжаловать штраф за парковку или нарушение ПДД</div>
-                <div class="answer" id="answer3">
-                    <p>Подробности об обжаловании штрафа...</p>
-                    <!-- Здесь разместите подробную информацию о вопросе -->
-                </div>
-            </div>
-
-            <div class="question-container">
-                <div class="question-item" onclick="toggleAnswer('answer4')">Какие способы оплаты есть на Госуслугах</div>
-                <div class="answer" id="answer4">
-                    <p>Подробности о способах оплаты на Госуслугах...</p>
-                    <!-- Здесь разместите подробную информацию о вопросе -->
-                </div>
-            </div>
-
-            <a href="#" class="all-questions">Все вопросы</a>
+        <!-- Search Section -->
+        <div class="search">
+            <input type="text" id="search-input" placeholder="УИН или комментарий к заметке">
         </div>
+
+        <!-- Fines Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Выбрать</th>
+                    <th>Дата</th>
+                    <th>Номер постановления</th>
+                    <th>Подразделение</th>
+                    <th>Сумма</th>
+                    <th>Срок оплаты</th>
+                </tr>
+            </thead>
+            <tbody id="fines-table">
+                <!-- Example fines -->
+                <tr data-amount="1500" data-status="unpaid">
+                    <td><input type="checkbox" class="fine-checkbox"></td>
+                    <td>27.05.2020 14:09</td>
+                    <td>18810177200530132034</td>
+                    <td>АП Москвы</td>
+                    <td>1500 ₽</td>
+                    <td>25.06.2020</td>
+                </tr>
+                <tr data-amount="500" data-status="paid">
+                    <td><input type="checkbox" class="fine-checkbox"></td>
+                    <td>06.11.2019 20:27</td>
+                    <td>18810150191150701410</td>
+                    <td>АП Москвы</td>
+                    <td>500 ₽</td>
+                    <td>15.05.2020</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Export Section -->
+        <div class="export-buttons">
+            Выгрузить: 
+            <button id="export-csv">CSV</button> 
+            | 
+            <button id="export-excel">Excel</button>
+        </div>
+
     </div>
 
-    <script>
-        function toggleAnswer(answerId) {
-            var answer = document.getElementById(answerId);
-            if (answer.style.display === "none") {
-                answer.style.display = "block";
-            } else {
-                answer.style.display = "none";
-            }
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="code.js"></script>
 </body>
 </html>
